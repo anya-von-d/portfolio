@@ -2059,7 +2059,7 @@ main {
 .tl-track::before {
   content: "";
   position: absolute;
-  left: 11px;
+  left: 16px;
   top: 26px;
   bottom: 26px;
   width: 1.5px;
@@ -2068,8 +2068,8 @@ main {
 .tl-row {
   position: relative;
   display: grid;
-  grid-template-columns: 30px 1fr auto;
-  column-gap: 16px;
+  grid-template-columns: 44px 1fr auto;
+  column-gap: 18px;
   row-gap: 5px;
   align-items: start;
   padding: 15px 0;
@@ -2079,9 +2079,9 @@ main {
   grid-row: 1;
   position: relative;
   z-index: 1;
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -2703,11 +2703,17 @@ main {
     padding: 18px 18px 22px;
   }
   .tl-row {
-    grid-template-columns: 30px 1fr;
+    grid-template-columns: 36px 1fr;
     row-gap: 4px;
   }
   .tl-logo {
     grid-row: 1;
+    width: 36px;
+    height: 36px;
+    border-radius: 11px;
+  }
+  .tl-track::before {
+    left: 13px;
   }
   .tl-line {
     grid-column: 2;
