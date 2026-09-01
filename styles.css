@@ -1836,8 +1836,28 @@ main {
     transform: none;
   }
 }
+.oc-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.oc-logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  overflow: hidden;
+  flex: none;
+  box-shadow: 0 0 0 4px #fff;
+}
+.oc-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .oc-role {
-  margin: 0 0 8px;
+  margin: 0;
   font-family: "Playfair Display", Georgia, serif;
   font-size: 26px;
   font-weight: 500;
@@ -2016,19 +2036,14 @@ main {
   box-shadow: 0 0 0 4px #fff;
   flex: none;
 }
-.tl-logo svg {
+.tl-logo svg,
+.tl-logo img {
   display: block;
   width: 100%;
   height: 100%;
 }
-.tl-logo-pad {
-  background: #fff;
-  border: 1px solid rgba(31, 31, 31, 0.08);
-}
-.tl-logo-pad img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
+.tl-logo img {
+  object-fit: cover;
 }
 .tl-line {
   grid-column: 2;
