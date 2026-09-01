@@ -1176,6 +1176,10 @@ main {
   color: var(--ink);
   margin: 0 0 20px;
 }
+.project-title.center {
+  margin-inline: auto;
+  text-align: center;
+}
 .project-meta {
   display: flex;
   flex-wrap: wrap;
@@ -1198,6 +1202,10 @@ main {
   color: var(--body);
   max-width: 720px;
   margin-top: 64px;
+}
+.project-full-desc.center {
+  margin-inline: auto;
+  text-align: center;
 }
 
 /* ---------- Project detail pages: wide breakout ---------- */
@@ -1877,9 +1885,12 @@ main {
 }
 .oc-panel {
   display: none;
+  position: relative;
 }
 .oc-panel.active {
-  display: block;
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
   animation: ocFadeIn 0.2s ease;
 }
 @keyframes ocFadeIn {
@@ -1892,16 +1903,18 @@ main {
     transform: none;
   }
 }
-.oc-panel-head {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 8px;
+.oc-date {
+  position: absolute;
+  top: 2px;
+  right: 0;
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
 }
 .oc-logo {
-  width: 30px;
-  height: 30px;
-  border-radius: 9px;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
   overflow: hidden;
   flex: none;
   box-shadow: 0 0 0 4px #fff;
@@ -1912,6 +1925,9 @@ main {
   height: 100%;
   object-fit: cover;
 }
+.oc-panel-body {
+  min-width: 0;
+}
 .oc-role {
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
@@ -1920,7 +1936,7 @@ main {
   color: var(--ink);
 }
 .oc-meta {
-  margin: 0 0 18px;
+  margin: 4px 0 12px;
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -2821,6 +2837,19 @@ main {
   }
   .oc-card {
     padding: 26px 22px 28px;
+  }
+  .oc-panel.active {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .oc-date {
+    position: static;
+    display: block;
+    text-align: right;
+  }
+  .oc-logo {
+    width: 52px;
+    height: 52px;
   }
   .skills-graph {
     aspect-ratio: 16 / 9;
