@@ -1165,6 +1165,9 @@ main {
 .project-back:hover {
   color: var(--ink);
 }
+.contact-back {
+  margin-left: 48px;
+}
 .project-title {
   font-size: 40px;
   font-weight: 700;
@@ -2276,11 +2279,10 @@ main {
   margin-top: 22px;
 }
 
-/* ---------- Get in touch (navy contact section) ---------- */
+/* ---------- Get in touch (contact page form) ---------- */
 .contact-section {
-  background: #000;
-  margin-top: 120px;
-  padding: 92px 0 116px;
+  margin-top: 0;
+  padding: 24px 0 100px;
 }
 .contact-inner {
   display: grid;
@@ -2294,13 +2296,13 @@ main {
   font-weight: 700;
   line-height: 60px;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: var(--ink);
   margin: 0 0 22px;
 }
 .contact-text {
   font-size: 18px;
   line-height: 28px;
-  color: rgba(255, 255, 255, 0.66);
+  color: var(--body);
   max-width: 440px;
   margin: 0;
 }
@@ -2314,14 +2316,14 @@ main {
   gap: 14px;
 }
 .cf-field {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(31, 31, 31, 0.03);
+  border: 1px solid rgba(31, 31, 31, 0.12);
   border-radius: 12px;
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 .cf-field:focus-within {
-  border-color: rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(31, 31, 31, 0.35);
+  background: rgba(31, 31, 31, 0.05);
 }
 .cf-field input,
 .cf-field textarea {
@@ -2332,7 +2334,7 @@ main {
   padding: 16px 18px;
   font-family: inherit;
   font-size: 16px;
-  color: #fff;
+  color: var(--ink);
   resize: vertical;
 }
 .cf-field textarea {
@@ -2340,7 +2342,55 @@ main {
 }
 .cf-field input::placeholder,
 .cf-field textarea::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--muted);
+}
+
+/* ---------- Contact teaser (home page, below Projects) ---------- */
+.contact-teaser {
+  background: #000;
+  margin-top: 120px;
+  padding: 92px 0 116px;
+}
+.contact-teaser-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.contact-teaser-title {
+  font-family: "Oswald", "Verlag Condensed", var(--font);
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 60px;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin: 0 0 22px;
+}
+.contact-teaser-text {
+  font-size: 18px;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.66);
+  max-width: 440px;
+  margin: 0 0 28px;
+}
+.contact-teaser-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 28px;
+  border-radius: 10px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.contact-teaser-cta:hover {
+  transform: translateY(-1px);
+  opacity: 0.88;
 }
 .cf-submit {
   align-self: flex-start;
@@ -2735,15 +2785,18 @@ main {
   .block {
     margin-top: 80px;
   }
-  .contact-inner {
+  .contact-inner,
+  .contact-teaser-inner {
     grid-template-columns: 1fr;
     gap: 36px;
   }
-  .contact-title {
+  .contact-title,
+  .contact-teaser-title {
     font-size: 40px;
     line-height: 44px;
   }
-  .contact-text {
+  .contact-text,
+  .contact-teaser-text {
     font-size: 16px;
     line-height: 24px;
   }
