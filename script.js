@@ -595,4 +595,49 @@
       });
     });
   });
+
+  /* ---------- Banner carousel (Teaching & Mentorship) ---------- */
+  var bannerCarousel = document.getElementById("bannerCarousel");
+  if (bannerCarousel) {
+    var bannerSlides = bannerCarousel.querySelectorAll(".banner-carousel-img");
+    var bannerDots = bannerCarousel.querySelectorAll(".banner-carousel-dot");
+    var bannerReduced = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    var bannerIndex = 0;
+    var bannerTimer = null;
+
+    function bannerShow(index) {
+      bannerIndex = (index + bannerSlides.length) % bannerSlides.length;
+      bannerSlides.forEach(function (slide, i) {
+        slide.classList.toggle("active", i === bannerIndex);
+      });
+      bannerDots.forEach(function (dot, i) {
+        var isActive = i === bannerIndex;
+        dot.classList.toggle("active", isActive);
+        dot.setAttribute("aria-selected", String(isActive));
+      });
+    }
+
+    function bannerStart() {
+      if (bannerReduced) return;
+      bannerTimer = window.setInterval(function () {
+        bannerShow(bannerIndex + 1);
+      }, 4500);
+    }
+
+    function bannerRestart() {
+      if (bannerTimer) window.clearInterval(bannerTimer);
+      bannerStart();
+    }
+
+    bannerDots.forEach(function (dot) {
+      dot.addEventListener("click", function () {
+        bannerShow(Number(dot.getAttribute("data-index")));
+        bannerRestart();
+      });
+    });
+
+    bannerStart();
+  }
 })();
