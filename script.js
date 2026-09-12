@@ -89,7 +89,7 @@
     }
   }
 
-  /* ---------- Community Outreach role tabs ---------- */
+  /* ---------- Mentorship role tabs ---------- */
   var ocTabs = document.querySelectorAll(".oc-tab");
   var ocPanels = document.querySelectorAll(".oc-panel");
   ocTabs.forEach(function (tab) {
