@@ -12,6 +12,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8733", "--directory", "../blog"],
       "port": 8733
+    },
+    {
+      "name": "new-portfolio",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8734", "--directory", "new-portfolio"],
+      "port": 8734
     }
   ]
 }
