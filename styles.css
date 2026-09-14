@@ -202,8 +202,6 @@ header.site-header {
   display: block;
   height: 32px;
   width: auto;
-  /* source mark is black ink on transparent; invert to show white on the dark header */
-  filter: invert(1);
 }
 
 .nav {
