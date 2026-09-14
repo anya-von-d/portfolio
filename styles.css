@@ -194,10 +194,16 @@ header.site-header {
 }
 
 .wordmark {
-  font-family: var(--f-display);
-  font-weight: 600;
-  font-size: 24px;
-  letter-spacing: -0.3px;
+  display: block;
+  line-height: 0;
+}
+
+.wordmark img {
+  display: block;
+  height: 32px;
+  width: auto;
+  /* source mark is black ink on transparent; invert to show white on the dark header */
+  filter: invert(1);
 }
 
 .nav {
