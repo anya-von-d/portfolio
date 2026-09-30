@@ -845,12 +845,27 @@ header.site-header {
   margin-top: 1px;
 }
 
-.research-card-header span {
+.research-card-org {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-width: 190px;
+}
+
+.research-card-org-name {
   font-family: var(--f-text);
   font-size: 14.5px;
   line-height: 1.35;
   color: var(--ink);
-  max-width: 190px;
+}
+
+.research-card-role {
+  font-family: var(--f-display);
+  font-weight: 600;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: var(--ink-faint);
 }
 
 .research-card-top h3 {
